@@ -46,6 +46,11 @@ class CommandeCrudController extends AbstractController
     #[Route('/mesCommande/{id}', name: 'app_my_commande_crud_show', methods: ['GET'])]
     public function showDetailCommande(Commande $commande, CommandeRepository $commandeRepository, AdresseRepository $adresseRepository, $id): Response
     {
+        $adrLivID = $commandeRepository->findOneBy(['com_facture_id' => $id])->getComAdresseLiv();
+        $adrFactId = $commandeRepository->findOneBy(['com_facture_id' => $id])->getComAdresseFact();
+        $adrLiv = $adresseRepository->findOneBy(['id' => $adrLivID]);
+        $adrFact = $adresseRepository->findOneBy(['id' => $adrFactId]);
+        //dd($adrLiv);
         $comId = $commandeRepository->findOneBy(['com_facture_id' => $id])->getId();
         $utiId = $commandeRepository->findOneBy(['com_facture_id' => $id])->getComUti()->getId();
         $facId = $commandeRepository->findOneBy(['com_facture_id' => $id])->getComFactureId();
@@ -62,13 +67,15 @@ class CommandeCrudController extends AbstractController
             //'commande' => $commande,
             'comId' => $comId,
             'utiId' => $utiId,
-           // 'nom' => $commandeRepository->myCommandeByCom($id)[0]['nom'],
-            //'prenom' => $commandeRepository->myCommandeByCom($id)[0]['prenom'],
-            'adresse' => $commandeRepository->myCommandeByCom($id)[0]['c_adLiv'],
-            'adresseFac' => $commandeRepository->myCommandeByCom($id)[0]['c_adFac'],
-            'tel' => $commandeRepository->myCommandeByCom($id)[0]['user_tel'],
-            'email' => $commandeRepository->myCommandeByCom($id)[0]['user_email'],
-            'adresse' => $commandeRepository->myCommandeByCom($id)[0]['c_adLiv'],
+            'adrLiv' => $adrLiv,
+            'adrFact' => $adrFact,
+        //    'nom' => $commandeRepository->myCommandeByCom($id)[0]['nom'],
+        //     'prenom' => $commandeRepository->myCommandeByCom($id)[0]['prenom'],
+            //  'adresse' => $commandeRepository->myCommandeByCom($id)[0]['c_adLiv'],
+            //  'adresseFac' => $commandeRepository->myCommandeByCom($id)[0]['c_adFac'],
+            //  'tel' => $commandeRepository->myCommandeByCom($id)[0]['user_tel'],
+              'email' => $commandeRepository->myCommandeByCom($id)[0]['user_email'],
+        //     'adresse' => $commandeRepository->myCommandeByCom($id)[0]['c_adLiv'],
             'facId' => $facId,
             'comDate' => $comDate,
             'facDate' => $facDate,

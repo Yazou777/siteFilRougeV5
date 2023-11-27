@@ -67,6 +67,14 @@ class Commande
     #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 2, nullable: true)]
     private ?string $com_facture_total_ttc = null;
 
+    #[ORM\ManyToOne(inversedBy: 'commandes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Adresse $com_adresse_liv = null;
+
+    #[ORM\ManyToOne(inversedBy: 'commandes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Adresse $com_adresse_fact = null;
+
     public function __construct()
     {
         $this->com_date = new \DateTimeImmutable();
@@ -311,6 +319,30 @@ class Commande
     public function setComFactureTotalTtc(?string $com_facture_total_ttc): static
     {
         $this->com_facture_total_ttc = $com_facture_total_ttc;
+
+        return $this;
+    }
+
+    public function getComAdresseLiv(): ?Adresse
+    {
+        return $this->com_adresse_liv;
+    }
+
+    public function setComAdresseLiv(?Adresse $com_adresse_liv): static
+    {
+        $this->com_adresse_liv = $com_adresse_liv;
+
+        return $this;
+    }
+
+    public function getComAdresseFact(): ?Adresse
+    {
+        return $this->com_adresse_fact;
+    }
+
+    public function setComAdresseFact(?Adresse $com_adresse_fact): static
+    {
+        $this->com_adresse_fact = $com_adresse_fact;
 
         return $this;
     }

@@ -738,16 +738,16 @@ class AppFixtures extends Fixture
         $manager->persist($adresseClient1);
         $adresseClient1->setAdrUti($client1);
 
-        $adresseClient1 = new Adresse();
-        $adresseClient1->setAdrNom('Femme de Client1');
-        $adresseClient1->setAdrPrenom('Demerda');
-        $adresseClient1->setAdrRue('5 rue de jachete');
-        $adresseClient1->setAdrCodePostal('66666');
-        $adresseClient1->setAdrTelephone('0614253689');
-        $adresseClient1->setAdrVille('Market City');
-        $adresseClient1->setAdrPays('France');
-        $manager->persist($adresseClient1);
-        $adresseClient1->setAdrUti($client1);
+        $adresseFemmeClient1 = new Adresse();
+        $adresseFemmeClient1->setAdrNom('Femme de Client1');
+        $adresseFemmeClient1->setAdrPrenom('Demerda');
+        $adresseFemmeClient1->setAdrRue('5 rue de jachete');
+        $adresseFemmeClient1->setAdrCodePostal('66666');
+        $adresseFemmeClient1->setAdrTelephone('0614253689');
+        $adresseFemmeClient1->setAdrVille('Market City');
+        $adresseFemmeClient1->setAdrPays('France');
+        $manager->persist($adresseFemmeClient1);
+        $adresseFemmeClient1->setAdrUti($client1);
 
 
         $client2 = new Utilisateur();
@@ -794,6 +794,8 @@ class AppFixtures extends Fixture
         $commande1client1->setComAdresseLivraison("A la maison");
         $commande1client1->setComAdresseFacturation("A la maison");
         $commande1client1->setComIsPaid(false);
+        $commande1client1->setComAdresseFact($adresseClient1);
+        $commande1client1->setComAdresseLiv($adresseClient1);
         $manager->persist($commande1client1);
         $client1->addCommande($commande1client1);
 
@@ -802,6 +804,8 @@ class AppFixtures extends Fixture
         $commande2client1->setComAdresseLivraison("Chez moi");
         $commande2client1->setComAdresseFacturation("Chez moi");
         $commande2client1->setComIsPaid(true);
+        $commande2client1->setComAdresseFact($adresseFemmeClient1);
+        $commande2client1->setComAdresseLiv($adresseFemmeClient1);
         $manager->persist($commande2client1);
         $client1->addCommande($commande2client1);
 

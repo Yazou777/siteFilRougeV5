@@ -14,10 +14,13 @@
                       
                 </div>
             <div class='border mb-2 py-2'>
-            Client : n°{{ utiId }}, {{ adresse }} , {{ tel }}, {{ email }}
+            {# Client : n°{{ utiId }}, {{ adresse }} , {{ tel }}, {{ email }} #}
+           <div> Client : n°{{ adrLiv.Id }}, {{ adrLiv.AdrNom}} {{ adrLiv.AdrPrenom}}  </div>
+          <div> Adresse de livraison : {{ adrLiv.AdrRue }}, {{ adrLiv.AdrCodePostal }}, {{adrLiv.AdrVille}}, {{ adrLiv.AdrPays}} </div>
+            <div> {{ adrLiv.AdrTelephone }}, {{ email }}  </div>
             </div>
             <div class='border py-3'>
-            Adresse de facturation : {{ adresseFac }}
+            Adresse de facturation : {{ adrFact.AdrNom }} {{ adrFact.AdrPrenom }} , {{ adrFact.AdrRue }} , {{ adrFact.AdrCodePostal }} {{ adrFact.AdrVille }} {{ adrFact.AdrPays }}
             </div>
         </div>
     
@@ -108,7 +111,5 @@
 <div>En cas de retard de paiement, application d’une indemnité forfaitaire pour frais de recouvrement de 40 euros (article D. 441-5 du code du commerce).</div>
    <div class='mt-5'> FilRougeCompany </div>
     <div> SA au capital de  </div>
-    </div>
-
-    
+    </div> 
 {% endblock %}

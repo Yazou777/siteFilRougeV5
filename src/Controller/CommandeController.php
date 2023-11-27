@@ -133,6 +133,8 @@ class CommandeController extends AbstractController
 
         $commande->setComAdresseFacturation(str_replace("[-br]", " ",$adresseFacture));
         $commande->setComAdresseLivraison(str_replace("[-br]", " ",$adresseLivraison));
+        $commande->setComAdresseFact($adresseFacture);
+        $commande->setComAdresseLiv($adresseLivraison);
         $commande->setComCommentaire($commentaire);
         $commande->setComtransporteur($transporteur);
         $commande->setComIsPaid(false);
