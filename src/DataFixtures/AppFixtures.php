@@ -54,6 +54,7 @@ class AppFixtures extends Fixture
         Voyez comment le destin leur imposera un choix : la sûreté des neuf royaumes ou la leur. Et pendant ce temps, Asgard rassemble ses forces...*
         Ceux qui défient le destin*
         Atreus part en quête du savoir qui l'aidera à comprendre la prophétie de « Loki » et le rôle qu'il doit jouer dans le Ragnarök. Kratos doit choisir entre rester paralysé par la peur de répéter ses erreurs ou se libérer du passé pour devenir le père dont Atreus a besoin.");
+        $jeuxPs5GodOfWar->setProStkphy(49);
         $manager->persist($jeuxPs5GodOfWar);
         $sousCatPs5Jeux->addProduit($jeuxPs5GodOfWar);
 
@@ -61,6 +62,7 @@ class AppFixtures extends Fixture
         $jeuxPs5TheLastOfUsP2->setProNom("The last of us part 2");
         $jeuxPs5TheLastOfUsP2->setProPrix(79.99);
         $jeuxPs5TheLastOfUsP2->setProImage("ps5JeuxTheLastOfUsP2.jpg");
+        $jeuxPs5TheLastOfUsP2->setProStkphy(66);
         $manager->persist($jeuxPs5TheLastOfUsP2);
         $sousCatPs5Jeux->addProduit($jeuxPs5TheLastOfUsP2);
 
@@ -68,6 +70,7 @@ class AppFixtures extends Fixture
         $jeuxPs5TheLastOfUsP1->setProNom("The last of us part 1");
         $jeuxPs5TheLastOfUsP1->setProPrix(79.99);
         $jeuxPs5TheLastOfUsP1->setProImage("ps5JeuxTheLastOfUsP1.jpg");
+        $jeuxPs5TheLastOfUsP1->setProStkphy(63);
         $manager->persist($jeuxPs5TheLastOfUsP1);
         $sousCatPs5Jeux->addProduit($jeuxPs5TheLastOfUsP1);
 
@@ -83,6 +86,7 @@ class AppFixtures extends Fixture
         $consolePS5->setProNom("Console PS5 standart");
         $consolePS5->setProPrix(499.99);
         $consolePS5->setProImage("ps5ConsoleBox.jpg");
+        $consolePS5->setProStkphy(100);
         $manager->persist($consolePS5);
         $sousCatPs5Console->addProduit($consolePS5);
 
@@ -90,6 +94,7 @@ class AppFixtures extends Fixture
         $consolePS5HFW->setProNom("Console PS5 standart + Horizon Forbidden West PS5");
         $consolePS5HFW->setProPrix(549.99);
         $consolePS5HFW->setProImage("ps5Console+HorizonFW.webp");
+        $consolePS5HFW->setProStkphy(24);
         $manager->persist($consolePS5HFW);
         $sousCatPs5Console->addProduit($consolePS5HFW);
 
@@ -97,6 +102,7 @@ class AppFixtures extends Fixture
         $consolePS5GOW->setProNom("Console PS5 standart + God Of War Ragnarök PS5");
         $consolePS5GOW->setProPrix(549.99);
         $consolePS5GOW->setProImage("ps5Console+GOW.webp");
+        $consolePS5GOW->setProStkphy(98);
         $manager->persist($consolePS5GOW);
         $sousCatPs5Console->addProduit($consolePS5GOW);
 
@@ -112,6 +118,7 @@ class AppFixtures extends Fixture
         $accessoirePS5->setProNom("Casque Playstation VR");
         $accessoirePS5->setProPrix(239.99);
         $accessoirePS5->setProImage("ps5AccessoireCasqueVR.jpg");
+        $accessoirePS5->setProStkphy(254);
         $manager->persist($accessoirePS5);
         $sousCatPs5Accessoires->addProduit($accessoirePS5);
 
@@ -119,6 +126,7 @@ class AppFixtures extends Fixture
         $accessoirePS5M->setProNom("Manette Playstation 5 officielle DualSense");
         $accessoirePS5M->setProPrix(69.95);
         $accessoirePS5M->setProImage("ps5AccessoireManette.jpg");
+        $accessoirePS5M->setProStkphy(69);
         $manager->persist($accessoirePS5M);
         $sousCatPs5Accessoires->addProduit($accessoirePS5M);
 
@@ -126,6 +134,7 @@ class AppFixtures extends Fixture
         $accessoirePS5->setProNom("Casque-micro sans fil Pulse 3D pour Playtation 5");
         $accessoirePS5->setProPrix(89.99);
         $accessoirePS5->setProImage("ps5AccessoireCasque.jpg");
+        $accessoirePS5->setProStkphy(17);
         $manager->persist($accessoirePS5);
         $sousCatPs5Accessoires->addProduit($accessoirePS5);
 ////////////////////////////////////////////
@@ -147,6 +156,7 @@ class AppFixtures extends Fixture
         $jeuxXboxSeriesCODMW3->setProNom("Call of duty moderne warfare 3");
         $jeuxXboxSeriesCODMW3->setProPrix(79.99);
         $jeuxXboxSeriesCODMW3->setProImage("xboxSeriesJeuxCODMW3.jpg");
+        $jeuxXboxSeriesCODMW3->setProStkphy(1340);
         $manager->persist($jeuxXboxSeriesCODMW3);
         $sousCategorieXboxSeriesJeux->addProduit($jeuxXboxSeriesCODMW3);
 
@@ -154,6 +164,7 @@ class AppFixtures extends Fixture
         $jeuxXboxSeriesDeadSpace->setProNom("Dead Space");
         $jeuxXboxSeriesDeadSpace->setProPrix(79.99);
         $jeuxXboxSeriesDeadSpace->setProImage("xboxSeriesJeuxDeadSpace.jpg");
+        $jeuxXboxSeriesDeadSpace->setProStkphy(170);
         $manager->persist($jeuxXboxSeriesDeadSpace);
         $sousCategorieXboxSeriesJeux->addProduit($jeuxXboxSeriesDeadSpace);
 
@@ -161,6 +172,7 @@ class AppFixtures extends Fixture
         $jeuxXboxSeriesStarfield->setProNom("Starfield");
         $jeuxXboxSeriesStarfield->setProPrix(79.99);
         $jeuxXboxSeriesStarfield->setProImage("xboxSeriesJeuxStarfield.jpg");
+        $jeuxXboxSeriesStarfield->setProStkphy(136);
         $manager->persist($jeuxXboxSeriesStarfield);
         $sousCategorieXboxSeriesJeux->addProduit($jeuxXboxSeriesStarfield);
 
@@ -176,6 +188,7 @@ class AppFixtures extends Fixture
         $consoleXboxSeries->setProNom("Console Xbox Serie standart");
         $consoleXboxSeries->setProPrix(499.99);
         $consoleXboxSeries->setProImage("xboxSeriesConsoleStandart.jpg");
+        $consoleXboxSeries->setProStkphy(136);
         $manager->persist($consoleXboxSeries);
         $sousCategorieXboxSeriesConsole->addProduit($consoleXboxSeries);
 
@@ -183,6 +196,7 @@ class AppFixtures extends Fixture
         $consoleXboxSeriesD4->setProNom("Console Xbox Serie standart + Diablo 4");
         $consoleXboxSeriesD4->setProPrix(599.99);
         $consoleXboxSeriesD4->setProImage("xboxSeriesConsole+diablo4.jpg");
+        $consoleXboxSeriesD4->setProStkphy(240);
         $manager->persist($consoleXboxSeriesD4);
         $sousCategorieXboxSeriesConsole->addProduit($consoleXboxSeriesD4);
 
@@ -190,6 +204,7 @@ class AppFixtures extends Fixture
         $consoleXboxSeriesHalo->setProNom("Console Xbox Serie standart + Halo Infinite");
         $consoleXboxSeriesHalo->setProPrix(599.99);
         $consoleXboxSeriesHalo->setProImage("xboxSeriesConsole+Halo.jpg");
+        $consoleXboxSeriesHalo->setProStkphy(200);
         $manager->persist($consoleXboxSeriesHalo);
         $sousCategorieXboxSeriesConsole->addProduit($consoleXboxSeriesHalo);
 
@@ -205,6 +220,7 @@ class AppFixtures extends Fixture
         $accessoireXboxSeriesManette->setProNom("Manette Wireless Xbox Series");
         $accessoireXboxSeriesManette->setProPrix(69.99);
         $accessoireXboxSeriesManette->setProImage("xboxSeriesAccessoireManette.jpg");
+        $accessoireXboxSeriesManette->setProStkphy(20);
         $manager->persist($accessoireXboxSeriesManette);
         $sousCategorieXboxSeriesAccessoires->addProduit($accessoireXboxSeriesManette);
 
@@ -212,6 +228,7 @@ class AppFixtures extends Fixture
         $accessoireXboxSeriesCasque->setProNom("Casque officiel Xbox Series");
         $accessoireXboxSeriesCasque->setProPrix(99.99);
         $accessoireXboxSeriesCasque->setProImage("xboxSeriesAccessoireCasque.jpg");
+        $accessoireXboxSeriesCasque->setProStkphy(8);
         $manager->persist($accessoireXboxSeriesCasque);
         $sousCategorieXboxSeriesAccessoires->addProduit($accessoireXboxSeriesCasque);
 
@@ -219,6 +236,7 @@ class AppFixtures extends Fixture
         $accessoireXboxSeriesStationR->setProNom("Station Recharge pour Manette Xbox Series");
         $accessoireXboxSeriesStationR->setProPrix(34.99);
         $accessoireXboxSeriesStationR->setProImage("xboxSeriesAccessoireStationRecharge.jpg");
+        $accessoireXboxSeriesStationR->setProStkphy(14);
         $manager->persist($accessoireXboxSeriesStationR);
         $sousCategorieXboxSeriesAccessoires->addProduit($accessoireXboxSeriesStationR);
 ////////////////////////////////////
@@ -241,6 +259,7 @@ class AppFixtures extends Fixture
         $jeuxSwitchMarioOD->setProNom("Mario Odyssey");
         $jeuxSwitchMarioOD->setProPrix(59.99);
         $jeuxSwitchMarioOD->setProImage("switchJeuxMarioOdyssey.jpg");
+        $jeuxSwitchMarioOD->setProStkphy(75);
         $manager->persist($jeuxSwitchMarioOD);
         $categorieSwitchJeux->addProduit($jeuxSwitchMarioOD);
 
@@ -248,6 +267,7 @@ class AppFixtures extends Fixture
         $jeuxSwitchSplatoon2->setProNom("Splatoon 2");
         $jeuxSwitchSplatoon2->setProPrix(59.99);
         $jeuxSwitchSplatoon2->setProImage("switchJeuxSplatoon2.jpg");
+        $jeuxSwitchSplatoon2->setProStkphy(43);
         $manager->persist($jeuxSwitchSplatoon2);
         $categorieSwitchJeux->addProduit($jeuxSwitchSplatoon2);
 
@@ -255,6 +275,7 @@ class AppFixtures extends Fixture
         $jeuxSwitchZeldaBOTW->setProNom("Zelda Breath Of The Wild");
         $jeuxSwitchZeldaBOTW->setProPrix(59.99);
         $jeuxSwitchZeldaBOTW->setProImage("switchJeuxZeldaBOTW.webp");
+        $jeuxSwitchZeldaBOTW->setProStkphy(5240);
         $manager->persist($jeuxSwitchZeldaBOTW);
         $categorieSwitchJeux->addProduit($jeuxSwitchZeldaBOTW);
 
@@ -270,6 +291,7 @@ class AppFixtures extends Fixture
         $consoleSwitch->setProNom("Console Switch Standart");
         $consoleSwitch->setProPrix(349.99);
         $consoleSwitch->setProImage("switchConsoleStandart.jpg");
+        $consoleSwitch->setProStkphy(5240);
         $manager->persist($consoleSwitch);
         $categorieSwitchConsole->addProduit($consoleSwitch);
 
@@ -277,6 +299,7 @@ class AppFixtures extends Fixture
         $consoleSwitchMK8->setProNom("Console Switch Standart + Mario Kart 8");
         $consoleSwitchMK8->setProPrix(449.99);
         $consoleSwitchMK8->setProImage("switchConsole+MK8.jpg");
+        $consoleSwitchMK8->setProStkphy(3240);
         $manager->persist($consoleSwitchMK8);
         $categorieSwitchConsole->addProduit($consoleSwitchMK8);
 
@@ -284,6 +307,7 @@ class AppFixtures extends Fixture
         $consoleSwitchSports->setProNom("Console Switch Standart + Sports");
         $consoleSwitchSports->setProPrix(449.99);
         $consoleSwitchSports->setProImage("switchConsole+Sports.jpg");
+        $consoleSwitchSports->setProStkphy(1240);
         $manager->persist($consoleSwitchSports);
         $categorieSwitchConsole->addProduit($consoleSwitchSports);
 
@@ -298,6 +322,7 @@ class AppFixtures extends Fixture
         $accessoireSwitchJoyCon->setProNom("Joy-Con pour Nintendo Switch");
         $accessoireSwitchJoyCon->setProPrix(69.99);
         $accessoireSwitchJoyCon->setProImage("switchAccessoireJoyCon.jpg");
+        $accessoireSwitchJoyCon->setProStkphy(1489);
         $manager->persist($accessoireSwitchJoyCon);
         $categorieSwitchAccesoires->addProduit($accessoireSwitchJoyCon);
 
@@ -305,6 +330,7 @@ class AppFixtures extends Fixture
         $accessoireSwitchMalette->setProNom("Malette de rangement pour Nintendo Switch");
         $accessoireSwitchMalette->setProPrix(34.99);
         $accessoireSwitchMalette->setProImage("switchAccessoireMalette.jpg");
+        $accessoireSwitchMalette->setProStkphy(190);
         $manager->persist($accessoireSwitchMalette);
         $categorieSwitchAccesoires->addProduit($accessoireSwitchMalette);
 
@@ -312,6 +338,7 @@ class AppFixtures extends Fixture
         $accessoireSwitchManettePro->setProNom("Manette Pro pour Nintendo Switch");
         $accessoireSwitchManettePro->setProPrix(14.99);
         $accessoireSwitchManettePro->setProImage("switchAccessoireManettePro.jpg");
+        $accessoireSwitchManettePro->setProStkphy(40);
         $manager->persist($accessoireSwitchManettePro);
         $categorieSwitchAccesoires->addProduit($accessoireSwitchManettePro);
 ////////////////////////////////////////////
@@ -331,6 +358,7 @@ class AppFixtures extends Fixture
         $jeuxPs4GOW->setProNom("God of war ps4");
         $jeuxPs4GOW->setProPrix(59.99);
         $jeuxPs4GOW->setProImage("ps4JeuxGOW.jpg");
+        $jeuxPs4GOW->setProStkphy(6);
         $manager->persist($jeuxPs4GOW);
         $categoriePs4Jeux->addProduit($jeuxPs4GOW);
 
@@ -338,6 +366,7 @@ class AppFixtures extends Fixture
         $jeuxPs4Rachet->setProNom("Rachet & Clanck");
         $jeuxPs4Rachet->setProPrix(59.99);
         $jeuxPs4Rachet->setProImage("ps4JeuxRachet.jpg");
+        $jeuxPs4Rachet->setProStkphy(3);
         $manager->persist($jeuxPs4Rachet);
         $categoriePs4Jeux->addProduit($jeuxPs4Rachet);
 
@@ -345,6 +374,7 @@ class AppFixtures extends Fixture
         $jeuxPs4U4->setProNom("Uncharted 4");
         $jeuxPs4U4->setProPrix(59.99);
         $jeuxPs4U4->setProImage("ps4JeuxUncharted4.jpg");
+        $jeuxPs4U4->setProStkphy(1);
         $manager->persist($jeuxPs4U4);
         $categoriePs4Jeux->addProduit($jeuxPs4U4);
 
@@ -360,6 +390,7 @@ class AppFixtures extends Fixture
         $consolePs4->setProNom("Console Ps4 Standart");
         $consolePs4->setProPrix(399.99);
         $consolePs4->setProImage("ps4ConsoleStandart.jpg");
+        $consolePs4->setProStkphy(1412);
         $manager->persist($consolePs4);
         $categoriePs4Console->addProduit($consolePs4);
 
@@ -367,6 +398,7 @@ class AppFixtures extends Fixture
         $consolePs4Pro->setProNom("Console Ps4 Pro");
         $consolePs4Pro->setProPrix(449.99);
         $consolePs4Pro->setProImage("ps4ConsolePro.jpg");
+        $consolePs4Pro->setProStkphy(434);
         $manager->persist($consolePs4Pro);
         $categoriePs4Console->addProduit($consolePs4Pro);
 
@@ -374,6 +406,7 @@ class AppFixtures extends Fixture
         $consolePs4CODMW2->setProNom("Console Ps4 Standart + Call Of Duty Moderne Warfare 2");
         $consolePs4CODMW2->setProPrix(449.99);
         $consolePs4CODMW2->setProImage("ps4Console+CODMW2.jpg");
+        $consolePs4CODMW2->setProStkphy(0);
         $manager->persist($consolePs4CODMW2);
         $categoriePs4Console->addProduit($consolePs4CODMW2);
 
@@ -389,6 +422,7 @@ class AppFixtures extends Fixture
         $accessoirePs4Manette->setProNom("Manette Ps4 Officiel");
         $accessoirePs4Manette->setProPrix(59.99);
         $accessoirePs4Manette->setProImage("ps4AccessoireManette.jpg");
+        $accessoirePs4Manette->setProStkphy(789);
         $manager->persist($accessoirePs4Manette);
         $categoriePs4Accessoires->addProduit($accessoirePs4Manette);
 
@@ -396,6 +430,7 @@ class AppFixtures extends Fixture
         $accessoirePs4Pulse3D->setProNom("Pulse 3D sans fil");
         $accessoirePs4Pulse3D->setProPrix(89.99);
         $accessoirePs4Pulse3D->setProImage("ps4AccessoirePulse3D.jpg");
+        $accessoirePs4Pulse3D->setProStkphy(470);
         $manager->persist($accessoirePs4Pulse3D);
         $categoriePs4Accessoires->addProduit($accessoirePs4Pulse3D);
 
@@ -403,6 +438,7 @@ class AppFixtures extends Fixture
         $accessoirePs4T300->setProNom("Thrustmaster T300 RS GT Racing Wheel");
         $accessoirePs4T300->setProPrix(359);
         $accessoirePs4T300->setProImage("ps4AccessoireT300.jpg");
+        $accessoirePs4T300->setProStkphy(0);
         $manager->persist($accessoirePs4T300);
         $categoriePs4Accessoires->addProduit($accessoirePs4T300);
 ///////////////////////////////////////////////////
@@ -422,6 +458,7 @@ class AppFixtures extends Fixture
         $jeuxXboxOneGears5->setProNom("Gears Of War 5");
         $jeuxXboxOneGears5->setProPrix(59.99);
         $jeuxXboxOneGears5->setProImage("xboxOneJeuxGearsOfWar5.jpg");
+        $jeuxXboxOneGears5->setProStkphy(47);
         $manager->persist($jeuxXboxOneGears5);
         $categorieXboxOneJeux->addProduit($jeuxXboxOneGears5);
 
@@ -429,6 +466,7 @@ class AppFixtures extends Fixture
         $jeuxXboxOneHalo->setProNom("Halo Xbox One");
         $jeuxXboxOneHalo->setProPrix(59.99);
         $jeuxXboxOneHalo->setProImage("xboxOneJeuxHalo.jpg");
+        $jeuxXboxOneHalo->setProStkphy(87);
         $manager->persist($jeuxXboxOneHalo);
         $categorieXboxOneJeux->addProduit($jeuxXboxOneHalo);
 
@@ -436,6 +474,7 @@ class AppFixtures extends Fixture
         $jeuxXboxOneSOD2->setProNom("State Of Decay 2 Xbox One");
         $jeuxXboxOneSOD2->setProPrix(59.99);
         $jeuxXboxOneSOD2->setProImage("xboxOneJeuxSOD2.jpeg");
+        $jeuxXboxOneSOD2->setProStkphy(68);
         $manager->persist($jeuxXboxOneSOD2);
         $categorieXboxOneJeux->addProduit($jeuxXboxOneSOD2);
 
@@ -451,6 +490,7 @@ class AppFixtures extends Fixture
         $consolexboxOne->setProNom("Console Xbox One Standart");
         $consolexboxOne->setProPrix(399.99);
         $consolexboxOne->setProImage("xboxOneConsoleStandart.jpg");
+        $consolexboxOne->setProStkphy(680);
         $manager->persist($consolexboxOne);
         $categorieXboxOneConsole->addProduit($consolexboxOne);
 
@@ -458,6 +498,7 @@ class AppFixtures extends Fixture
         $consolexboxOneFifa15->setProNom("Console Xbox One Standart + Fifa 2015");
         $consolexboxOneFifa15->setProPrix(449.99);
         $consolexboxOneFifa15->setProImage("xboxOneConsole+fifa15.jpg");
+        $consolexboxOneFifa15->setProStkphy(48);
         $manager->persist($consolexboxOneFifa15);
         $categorieXboxOneConsole->addProduit($consolexboxOneFifa15);
 
@@ -465,6 +506,7 @@ class AppFixtures extends Fixture
         $consolexboxOneForzaH3->setProNom("Console Xbox One Standart + Forza Hozizon 3");
         $consolexboxOneForzaH3->setProPrix(449.99);
         $consolexboxOneForzaH3->setProImage("xboxOneConsole+ForzaH3.jpg");
+        $consolexboxOneForzaH3->setProStkphy(678);
         $manager->persist($consolexboxOneForzaH3);
         $categorieXboxOneConsole->addProduit($consolexboxOneForzaH3);
 
@@ -481,6 +523,7 @@ class AppFixtures extends Fixture
         $accessoireXboxOneAlim->setProDescription('YCCTEAM Alimentation pour Xbox One AC Adaptateur Secteur Brique Bloc Chargeur Kit de Remplacement de Câble pour Xbox One Console, Auto Tension 100-240V');
         $accessoireXboxOneAlim->setProPrix(32.99);
         $accessoireXboxOneAlim->setProImage("xboxOneAccessoireAlimentation.jpg");
+        $accessoireXboxOneAlim->setProStkphy(8);
         $manager->persist($accessoireXboxOneAlim);
         $categorieXboxOneAccesoires->addProduit($accessoireXboxOneAlim);
 
@@ -489,6 +532,7 @@ class AppFixtures extends Fixture
         $accessoireXboxOneBC->setProDescription("Batteries Manette pour Xbox One, Kits Batterie et Chargeur pour Manette Xbox Series X|S avec 2x2800mAh Batteries, Batterie Rechargeable pour Xbox Series X|S/One S/One X/One Elite");
         $accessoireXboxOneBC->setProPrix(19.99);
         $accessoireXboxOneBC->setProImage("xboxOneAccessoireBatterieChargeur.jpg");
+        $accessoireXboxOneBC->setProStkphy(88);
         $manager->persist($accessoireXboxOneBC);
         $categorieXboxOneAccesoires->addProduit($accessoireXboxOneBC);
 
@@ -497,6 +541,7 @@ class AppFixtures extends Fixture
         $accessoireXboxOneManette->setProDescription("Xbox Manette sans fil Carbon Black avec Câble USB-C pour PC, Xbox Series X, Xbox Series S, Xbox One, Windows 10 & 11, Android et iOS ");
         $accessoireXboxOneManette->setProPrix(59.93);
         $accessoireXboxOneManette->setProImage("xboxOneAccessoireManette.jpg");
+        $accessoireXboxOneManette->setProStkphy(1678);
         $manager->persist($accessoireXboxOneManette);
         $categorieXboxOneAccesoires->addProduit($accessoireXboxOneManette);
 //////////////////////////////////////////////////
@@ -516,6 +561,7 @@ class AppFixtures extends Fixture
         $jeuxPcTRC->setProNom("Tomb Raider Collection");
         $jeuxPcTRC->setProPrix(34.99);
         $jeuxPcTRC->setProImage("pcJeuxTRC.jpg");
+        $jeuxPcTRC->setProStkphy(16);
         $manager->persist($jeuxPcTRC);
         $categoriePcJeux->addProduit($jeuxPcTRC);
 
@@ -523,6 +569,7 @@ class AppFixtures extends Fixture
         $jeuxPcTRTAOD->setProNom("Tomb Raider the angel of darkness");
         $jeuxPcTRTAOD->setProPrix(14.99);
         $jeuxPcTRTAOD->setProImage("pcJeuxTRTAOD.jpg");
+        $jeuxPcTRTAOD->setProStkphy(18);
         $manager->persist($jeuxPcTRTAOD);
         $categoriePcJeux->addProduit($jeuxPcTRTAOD);
 
@@ -530,6 +577,7 @@ class AppFixtures extends Fixture
         $jeuxPcTRU->setProNom("Tomb Raider Underworld");
         $jeuxPcTRU->setProPrix(14.99);
         $jeuxPcTRU->setProImage("pcJeuxTRU.jpg");
+        $jeuxPcTRU->setProStkphy(1);
         $manager->persist($jeuxPcTRU);
         $categoriePcJeux->addProduit($jeuxPcTRU);
 
@@ -547,6 +595,7 @@ class AppFixtures extends Fixture
         $PcCyberpower->setProPrix(1310.14);
         $PcCyberpower->setProDescription("CyberpowerPC Luxe PC Gamer - Intel Core i9-11900KF, Nvidia RTX 3060 12Go, RAM 32Go, SSD NVMe 1To, 650W 80+ PSU, WiFi, Refroidissement Liquide, Windows 11, 4000D Airflow");
         $PcCyberpower->setProImage("pcGamerCyberpower.jpg");
+        $PcCyberpower->setProStkphy(175);
         $manager->persist($PcCyberpower);
         $categoriePcConsole->addProduit($PcCyberpower);
 
@@ -555,6 +604,7 @@ class AppFixtures extends Fixture
         $PcINFOMAX->setProPrix(3669.99);
         $PcINFOMAX->setProDescription("INFOMAX | PC Gamer, Ordinateur de Bureau, PC Gaming - Processeur Intel Core i9-13900KF • NVIDIA RTX 4090 24 GO • RAM DDR5 32 GO RGB • SSD 2 to • BOÎTIER ARGB Aquarius • Watercooling • FREEDOS");
         $PcINFOMAX->setProImage("pcGamerINFOMAX.jpg");
+        $PcINFOMAX->setProStkphy(100);
         $manager->persist($PcINFOMAX);
         $categoriePcConsole->addProduit($PcINFOMAX);
 
@@ -563,6 +613,7 @@ class AppFixtures extends Fixture
         $PcMegaport->setProPrix(2269);
         $PcMegaport->setProDescription("Megaport High End PC Gamer • Intel Core i9-11900KF • Windows 11 • Nvidia GeForce RTX4080 • 32Go 3200MHz DDR4 • 1To M.2 SSD • Refroidissement Liquide • Unité Centrale Ordinateur de Bureau");
         $PcMegaport->setProImage("pcGamerMegaport.jpg");
+        $PcMegaport->setProStkphy(100);
         $manager->persist($PcMegaport);
         $categoriePcConsole->addProduit($PcMegaport);
 
@@ -580,6 +631,7 @@ class AppFixtures extends Fixture
         $accessoirePcBureau->setProPrix(104.95);
         $accessoirePcBureau->setProDescription("HLFURNIEU 140 × 60 cm Bureau Gaming, Bureau Gamer Informatique Ergonomique, Table Gaming en Fibre de Carbone, Gaming Desk avec Porte Gobelet et Crochet pour Casque, Noir");
         $accessoirePcBureau->setProImage("pcAccessoireBureau.jpg");
+        $accessoirePcBureau->setProStkphy(175);
         $manager->persist($accessoirePcBureau);
         $categoriePcAccesoires->addProduit($accessoirePcBureau);
 
@@ -588,6 +640,7 @@ class AppFixtures extends Fixture
         $accessoirePcClavier->setProPrix(33.99);
         $accessoirePcClavier->setProDescription("EMPIRE GAMING - Pack MK800 Filaire - Clavier Gaming AZERTY (Layout Français) RGB 105 Touches 19 Touches Anti-Ghosting - Souris Gamer 2400 DPI - Tapis de Souris - PC PS4 PS5 Xbox One/Series Mac");
         $accessoirePcClavier->setProImage("pcAccessoireClavier.jpg");
+        $accessoirePcClavier->setProStkphy(34);
         $manager->persist($accessoirePcClavier);
         $categoriePcAccesoires->addProduit($accessoirePcClavier);
 
@@ -596,6 +649,7 @@ class AppFixtures extends Fixture
         $accessoirePcEcran->setProPrix(129.99);
         $accessoirePcEcran->setProDescription("KOORUI 24'' Ecran PC Gaming Incurvé 1800R, Moniteur PC Dalle VA, Résolution FHD (1080P), 165Hz, DCI-P3 90%, Lunette Ultra-Mince, Inclinaison réglable, Prend en Charge HDMI/DP");
         $accessoirePcEcran->setProImage("pcAccessoireEcran.jpg");
+        $accessoirePcEcran->setProStkphy(24);
         $manager->persist($accessoirePcEcran);
         $categoriePcAccesoires->addProduit($accessoirePcEcran);
 ////////////////////////////////////
