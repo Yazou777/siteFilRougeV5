@@ -33,11 +33,11 @@ class Commande
     #[ORM\OneToMany(mappedBy: 'bon_com', targetEntity: BonLivraison::class)]
     private Collection $bonLivraisons;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $com_adresse_livraison = null;
+    // #[ORM\Column(length: 255, nullable: true)]
+    // private ?string $com_adresse_livraison = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $com_adresse_facturation = null;
+    // #[ORM\Column(length: 255, nullable: true)]
+    // private ?string $com_adresse_facturation = null;
 
     #[ORM\ManyToOne(inversedBy: 'commandes')]
     #[ORM\JoinColumn(nullable: false)]
@@ -191,29 +191,29 @@ class Commande
         return $this;
     }
 
-    public function getComAdresseLivraison(): ?string
-    {
-        return $this->com_adresse_livraison;
-    }
+    // public function getComAdresseLivraison(): ?string
+    // {
+    //     return $this->com_adresse_livraison;
+    // }
 
-    public function setComAdresseLivraison(string $com_adresse_livraison): static
-    {
-        $this->com_adresse_livraison = $com_adresse_livraison;
+    // public function setComAdresseLivraison(string $com_adresse_livraison): static
+    // {
+    //     $this->com_adresse_livraison = $com_adresse_livraison;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    public function getComAdresseFacturation(): ?string
-    {
-        return $this->com_adresse_facturation;
-    }
+    // public function getComAdresseFacturation(): ?string
+    // {
+    //     return $this->com_adresse_facturation;
+    // }
 
-    public function setComAdresseFacturation(string $com_adresse_facturation): static
-    {
-        $this->com_adresse_facturation = $com_adresse_facturation;
+    // public function setComAdresseFacturation(string $com_adresse_facturation): static
+    // {
+    //     $this->com_adresse_facturation = $com_adresse_facturation;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     public function getComTransporteur(): ?Transporteur
     {

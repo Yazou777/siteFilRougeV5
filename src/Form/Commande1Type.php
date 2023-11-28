@@ -14,13 +14,13 @@ class Commande1Type extends AbstractType
         $builder
             ->add('com_date')
             ->add('com_commentaire')
-            ->add('com_adresse_livraison')
-            ->add('com_adresse_facturation')
+            // ->add('com_adresse_livraison')
+            // ->add('com_adresse_facturation')
             ->add('com_isPaid')
             ->add('com_moyen_paiement')
             ->add('com_stripe_session_id')
             ->add('com_paypal_id')
-            ->add('com_uti')
+            // ->add('com_uti')
             ->add('com_transporteur')
         ;
     }

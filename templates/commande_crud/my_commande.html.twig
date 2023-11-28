@@ -11,8 +11,8 @@
                 <th>Id</th>
                 <th>Com_date</th>
                 <th>Com_commentaire</th>
-                <th>Com_adresse_livraison</th>
-                <th>Com_adresse_facturation</th>
+                {# <th>Com_adresse_livraison</th>
+                <th>Com_adresse_facturation</th> #}
                 <th>Com_isPaid</th>
                 <th>Com_moyen_paiement</th>
                 <th>Com_stripe_session_id</th>
@@ -26,8 +26,8 @@
               <td>{{ commande.id }}</td>
                 <td>{{ commande.comDate ? commande.comDate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ commande.comCommentaire }}</td>
-                <td>{{ commande.comAdresseLivraison }}</td>
-                <td>{{ commande.comAdresseFacturation }}</td>
+                {# <td>{{ commande.comAdresseLivraison }}</td>
+                <td>{{ commande.comAdresseFacturation }}</td> #}
                 <td>{{ commande.comIsPaid ? 'Yes' : 'No' }}</td>
                 <td>{{ commande.comMoyenPaiement }}</td>
                 <td>{{ commande.comStripeSessionId }}</td>

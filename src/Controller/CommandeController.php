@@ -131,8 +131,8 @@ class CommandeController extends AbstractController
      //$commande->setComAdresseLivraison($this->getUser()->getUtiRue()." ".$this->getUser()->getUtiVille()." ".$this->getUser()->getUtiCodePostal()." ".$this->getUser()->getUtiPays());
      //dd($commande);
 
-        $commande->setComAdresseFacturation(str_replace("[-br]", " ",$adresseFacture));
-        $commande->setComAdresseLivraison(str_replace("[-br]", " ",$adresseLivraison));
+        // $commande->setComAdresseFacturation(str_replace("[-br]", " ",$adresseFacture));
+        // $commande->setComAdresseLivraison(str_replace("[-br]", " ",$adresseLivraison));
         $commande->setComAdresseFact($adresseFacture);
         $commande->setComAdresseLiv($adresseLivraison);
         $commande->setComCommentaire($commentaire);

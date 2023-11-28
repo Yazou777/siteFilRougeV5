@@ -845,8 +845,8 @@ class AppFixtures extends Fixture
 
         $commande1client1 = new Commande();
         $commande1client1->setComCommentaire("attention aux chiens");
-        $commande1client1->setComAdresseLivraison("A la maison");
-        $commande1client1->setComAdresseFacturation("A la maison");
+        // $commande1client1->setComAdresseLivraison("A la maison");
+        // $commande1client1->setComAdresseFacturation("A la maison");
         $commande1client1->setComIsPaid(false);
         $commande1client1->setComAdresseFact($adresseClient1);
         $commande1client1->setComAdresseLiv($adresseClient1);
@@ -855,8 +855,8 @@ class AppFixtures extends Fixture
 
         $commande2client1 = new Commande();
         $commande2client1->setComCommentaire("attention aux chiennes");
-        $commande2client1->setComAdresseLivraison("Chez moi");
-        $commande2client1->setComAdresseFacturation("Chez moi");
+        // $commande2client1->setComAdresseLivraison("Chez moi");
+        // $commande2client1->setComAdresseFacturation("Chez moi");
         $commande2client1->setComIsPaid(true);
         $commande2client1->setComAdresseFact($adresseFemmeClient1);
         $commande2client1->setComAdresseLiv($adresseFemmeClient1);
