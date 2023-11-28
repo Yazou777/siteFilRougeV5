@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Stripe\Stripe;
+use App\Entity\Panier;
 use App\Entity\Produit;
 use App\Entity\Commande;
 use App\Entity\Transporteur;
@@ -126,6 +127,19 @@ $checkout_session = \Stripe\Checkout\Session::create([
         $order->setComFactureTva(($totalData[0]["p_total"] - $totalData[0]["p_fdp"]) * 0.2);
         $order->setComFactureTotalTtc((($totalData[0]["p_total"] - $totalData[0]["p_fdp"]) * 0.2) +$totalData[0]["p_total"]);
        // dd((($totalData[0]["p_total"] - $totalData[0]["p_fdp"]) * 0.2) +$totalData[0]["p_total"]);
+       //on récupere le panier de la commande
+       $panier = $this->em->getRepository(Panier::class)->findBy(['pan_com' => $id]);
+       foreach($panier as $paniers){
+        // on recupere les produits 
+        $produit = $paniers->getPanPro();
+        //on met a jour le stock du produit
+        $newStock = $produit->getProStkphy() - $paniers->getPanQuantite();
+        $produit->setProStkphy($newStock);
+        $em->persist($produit);
+        //dd($produit->getProStkphy());
+       }
+      
+
         $em->persist($order);
         $em->flush();
         //return $this->render('order/succes.html.twig');
