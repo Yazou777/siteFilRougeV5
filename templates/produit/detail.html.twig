@@ -41,12 +41,16 @@
 </div>
 
 <div class="col-4 bg-secondary forSticky">
-
+<div> Quantité disponible : {{ pro.proStkphy}} </div>
 <div class="fs-1 sticky-sm-top">
 {{ pro.proPrix}}€
 {# {{ pro.proPrix|number_format(2, '.', ',')}}€ #}
    {# <a href="/add/{{Produit.id}}" class="btn btn-success">Ajouter au panier</a> #}
+   {% if pro.proStkphy > 0 %}
 <a href="{{ path('panier_add', {id: pro.Id}) }}" class="btn btn-success">Ajouter au panier</a>
+{% else %}
+<button class="btn btn-success">Produit non disponible</button>
+{% endif %}
 </div> 
 
 

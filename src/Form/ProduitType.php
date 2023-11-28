@@ -21,7 +21,8 @@ class ProduitType extends AbstractType
             ->add('pro_prix')
             ->add('pro_image')
             ->add('imageFile', VichImageType::class, [
-                'label' => 'Image du produit'
+                'label' => 'Image du produit',
+                'required' => false,
             ])
             ->add('pro_description')
             ->add('pro_stkphy')
