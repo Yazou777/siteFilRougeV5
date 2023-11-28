@@ -56,16 +56,22 @@ class PanierController extends AbstractController
 
         //On récupère l'id du produit
         $id = $produit->getId();
-
+        // On recupere le stock disponible du produit
+        $stock = $produit->getProStkphy();
         // On récupère le panier existant
         $panier = $session->get('panier', []);
 
           // On ajoute le produit dans le panier s'il n'y est pas encore
         // Sinon on incrémente sa quantité
+        // on verifie si elseif le stock disponible du produit est superieur a la quantité du produit dans le panier
+        // autrement le panier de change pas 
         if(empty($panier[$id])){
             $panier[$id] = 1;
-        }else{
+        }elseif ($stock > $panier[$id]){
             $panier[$id]++;
+        }
+        else{
+            $panier[$id] = $panier[$id];
         }
 
 
